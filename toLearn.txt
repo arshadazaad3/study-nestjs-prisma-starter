@@ -1,0 +1,6 @@
+- run this repo in your pc
+- try to create CI/CD for AWS
+- using aws fargate
+- inside the project you can found docker-compose and docker file
+- using github action
+- AWS code pipeline for CICD
