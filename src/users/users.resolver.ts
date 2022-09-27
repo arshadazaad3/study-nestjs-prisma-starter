@@ -28,27 +28,27 @@ export class UsersResolver {
     return user;
   }
 
-  @UseGuards(GqlAuthGuard)
-  @Mutation(() => User)
-  async updateUser(
-    @UserEntity() user: User,
-    @Args('data') newUserData: UpdateUserInput
-  ) {
-    return this.usersService.updateUser(user.id, newUserData);
-  }
+  // @UseGuards(GqlAuthGuard)
+  // @Mutation(() => User)
+  // async updateUser(
+  //   @UserEntity() user: User,
+  //   @Args('data') newUserData: UpdateUserInput
+  // ) {
+  //   return this.usersService.updateUser(user.id, newUserData);
+  // }
 
-  @UseGuards(GqlAuthGuard)
-  @Mutation(() => User)
-  async changePassword(
-    @UserEntity() user: User,
-    @Args('data') changePassword: ChangePasswordInput
-  ) {
-    return this.usersService.changePassword(
-      user.id,
-      user.password,
-      changePassword
-    );
-  }
+  // @UseGuards(GqlAuthGuard)
+  // @Mutation(() => User)
+  // async changePassword(
+  //   @UserEntity() user: User,
+  //   @Args('data') changePassword: ChangePasswordInput
+  // ) {
+  //   return this.usersService.changePassword(
+  //     user.id,
+  //     user.password,
+  //     changePassword
+  //   );
+  // }
 
   @ResolveField('posts')
   posts(@Parent() author: User) {
